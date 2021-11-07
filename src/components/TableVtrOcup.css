@@ -1,0 +1,36 @@
+#vtrsOcupadasTable {
+    margin-top: 1.5vh;
+    font-family: "Century Gothic", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#vtrsOcupadasTable td {
+    border: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1rem;
+    max-width: 80px;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: white;
+}
+
+#vtrsOcupadasTable tr:nth-child(even) {
+    background-color: #4c5baf;
+}
+
+#vtrsOcupadasTable tr:hover {
+    background-color: rgb(207, 80, 80);
+}
+
+#vtrsOcupadasTable th,
+tfoot td {
+    font-size: 1rem;
+    text-align: center;
+    background-color: #ce2244;
+    color: white;
+}

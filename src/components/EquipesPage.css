@@ -1,0 +1,236 @@
+html{
+    background-color: rgb(233, 234, 239);  
+    
+}
+
+h1, h2, h3, h4{
+    font-family: "Century Gothic", sans-serif;
+}
+h2{
+    width: fit-content;
+    margin: 0;
+}
+.tituloeBotao{
+    display: flex;
+}
+button {
+    height: 25px;
+}
+.cabecalhoInterno {
+    box-shadow: 10px 5px 5px black;
+    height: 10vh;
+    background-image: linear-gradient(
+        to right,
+        rgb(25, 109, 165),
+        rgb(38, 39, 102),
+        rgb(25, 109, 165),
+        rgb(38, 39, 102)
+    );
+    font-family: "Century Gothic", sans-serif;
+    vertical-align: text-top;
+    
+}
+.cabecalhoInterno #logoPM {
+    display: inline;
+    height: 9.8vh;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+.policia {
+    vertical-align: middle;
+    display: inline;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+}
+.mstexto {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+    width: 70px;
+    padding-left: 10px;
+}
+.tituloGerdes{
+    display: inline;
+    vertical-align: middle;
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-left: 5vw;
+    
+}
+.sidebar{
+    float: left;
+    box-sizing: border-box;
+    height: 90vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(14, 59, 88),
+        rgb(25, 26, 68)
+    );
+    width: 10vw;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.sidebar .menuTitulo{
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 800;
+    color: white;
+    text-align: center;    
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.sidebar ul{
+    list-style-type: none;  
+    margin: 0;
+    padding: 0; 
+}
+.sidebar ul li{
+    text-align: center;    
+    padding: 5px;
+}
+.sidebar li:hover{
+    background-color: rgb(1, 6, 8);
+}
+.sidebar ul li a{
+    text-decoration: none;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 800;
+    color: white
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.flex-container{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background-color: rgb(233, 234, 239);
+}
+@media (max-width: 1200px) {
+    .flex-container {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+.card{
+    margin-left: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 0.5vh;
+    padding: 20px;
+    background-color: white;
+    display: flexbox;    
+    box-sizing: content-box;
+    width: 48vw;
+    height: 30vh;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0/9%);
+    border-radius: 25px;
+}
+.ocoPendentes{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    background-color: rgb(255, 255, 255);
+}
+.cardVtr{
+    margin-left: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 0.5vh;
+    padding: 20px;
+    background-color: white;
+    display: flexbox;    
+    box-sizing: content-box;
+    width: 25vw;
+    height: 30vh;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0/9%);
+    border-radius: 25px;
+}
+.vtrDispoDiv{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+    background-color: rgb(255, 255, 255);
+}
+.vtrOcupDiv{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+    background-color: rgb(255, 255, 255);
+}
+#vtrsDisponiveisTitulo{
+    padding: 5px;
+    background-color: white;
+    border-color: #009688;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #009688;
+    margin-right: 5vw;
+}
+#vtrsocupadasTitulo{
+    padding: 5px;
+    background-color: white;
+    border-color: #966600;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #966600;
+    margin-right: 5vw;
+}
+
+.ocoEmAtendimento{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    background-color: rgb(255, 255, 255);
+}
+th {
+    position: sticky;
+    top: 0; /* Don't forget this, required for the stickiness */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+#pendentesh2{
+    padding: 5px;
+    background-color: white;
+    border-color: #FF5722;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #FF5722;
+    margin-right: 5vw;
+}
+
+#ocoAtendimentoh2{
+    padding: 5px;
+    background-color: white;
+    border-color: #FFC107;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFC107;
+    margin-right: 5vw;
+}
+#equipes-msgs-de-erro{
+    color: red;
+}

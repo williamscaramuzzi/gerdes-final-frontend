@@ -1,0 +1,79 @@
+.cabecalho {
+  height: 10vh;
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(25, 109, 165), rgb(38, 39, 102), rgb(25, 109, 165), rgb(38, 39, 102));
+}
+.cabecalho img {
+  height: 9.8vh;
+}
+.divtitulo{
+  font-family: "Century Gothic", sans-serif;
+  vertical-align: middle;
+  line-height: 5rem;
+  margin-left: 10vw;
+  display: inline;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(40, 56, 145);
+}
+
+div#divcontainer {
+  background-color: rgb(229, 234, 243);
+  box-shadow: 5px 5px 5px black;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  margin-left: 10vw;
+  top: 20%;
+  left: 20%;
+}
+
+.rodapeWrapper {
+  margin-top: 5rem;
+  font-family: "Century Gothic", sans-serif;
+  vertical-align: text-top;
+}
+
+.policiaMilitar{
+  vertical-align: middle;
+  margin-left: 10vw;
+  display: inline;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(40, 56, 145);
+}
+.ms {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  font-weight: 800;
+  color: rgb(40, 56, 145);
+  width: 70px;
+  padding-left: 2px;
+}
+.logoEstado {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 20vw;
+  background-color: transparent;
+}
+
+.divform {
+  width: fit-content;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 20%;
+}
+
+label {
+  text-transform: capitalize;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  font: bold;
+}
+#buttonTd {
+  text-align: right;
+  padding-top: 1rem;
+}
