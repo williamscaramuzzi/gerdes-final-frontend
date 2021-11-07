@@ -13,7 +13,7 @@ export default function ModalConcluirOco(props) {
     const [enderecoInput, setEnderecoInput] = useState("");
     const [vitimaInput, setVitimaInput] = useState("");
     const [descricaoInput, setDescricaoInput] = useState("");
-
+    const [digiteODesfecho, setDigiteODesfecho] = useState("");
 
     function fecharModalConcluirOco() {
         setSolicitanteInput('');
@@ -21,13 +21,14 @@ export default function ModalConcluirOco(props) {
         setVitimaInput('');
         setDescricaoInput('');
         document.getElementById("modalConcluirOco").style.display = "none";
-        document.getElementById("formEditarOcorrencia").reset();
+        document.getElementById("formConcluirOcorrencia").reset();
         props.setFato("");
         props.setEquipes([""]);
         props.setVisibility(false);
     }
 
-    async function salvar() {
+    async function salvar(e) {
+        if(document.getElementById("formConcluirOcorrencia").checkValidity()) e.preventDefault(); else return;
         let oc = {};
         oc.despacho = props.oco.despacho;
         oc.fato = props.fato;
@@ -66,9 +67,19 @@ export default function ModalConcluirOco(props) {
         history.push("/empty");         
         history.push("/home")
     }
-    async function concluir() {
+    async function concluir(e) {
+        if(document.getElementById("formConcluirOcorrencia").checkValidity()) e.preventDefault(); else return;
         let desfecho = window.prompt("Insira o desfecho da ocorrência (recomenda-se anotar o nº do BO SIGO): ");
-        if(desfecho===null) return;
+        if(desfecho===null){
+            //usuario cancelou o prompt, desistiu de concluir, portanto, não salvamos nada, só sair dessa função
+            return;
+        }
+        if(desfecho===""){
+            //usuario não digitou nada e deu ok, temos que obrigar ele a digitar
+            setDigiteODesfecho("Insira um desfecho para a ocorrencia");
+            return;
+        }
+        setDigiteODesfecho("");
         let oc = {};
         oc.despacho = props.oco.despacho;
         oc.fato = props.fato;
@@ -105,7 +116,7 @@ export default function ModalConcluirOco(props) {
                     <h2>Finalizar ocorrência</h2>
                 </header>
                 <div className="w3-container">
-                    <form action="/home/criarocorrencia" method="POST" id="formEditarOcorrencia">
+                    <form action="/home/criarocorrencia" method="POST" id="formConcluirOcorrencia">
                         <table>
                             <tbody>
                                 <tr>
@@ -154,9 +165,10 @@ export default function ModalConcluirOco(props) {
                                         rows={4}></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><Button onClick={salvar} variant="outlined" color="secondary">Salvar</Button></td>
-                                    <td><Button onClick={concluir} variant="contained" color="primary">Concluir</Button></td>
+                                    <td><Button onClick={salvar} type="submit" variant="outlined" color="secondary">Salvar</Button></td>
+                                    <td><Button onClick={concluir} type="submit" variant="contained" color="primary">Concluir</Button></td>
                                     <td><Button onClick={fecharModalConcluirOco} variant="contained" color="secondary">Cancelar</Button></td>
+                                    <td><span>{digiteODesfecho}</span></td>
                                 </tr>
                             </tbody>
                         </table>

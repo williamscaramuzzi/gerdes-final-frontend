@@ -16,11 +16,12 @@ export default function ModalCriarOco(props) {
     }
 
     async function criarOcorrencia(e){
-        e.preventDefault();        
+        if(document.getElementById("formCriarOcorrencia").checkValidity()) e.preventDefault(); else return;       
         let oco = {};
         oco.fato = document.getElementById("fatoSelect").value;
         // esse aqui so tem no modal editar oco:  oco.equipe = document.getElementById("equipeInput").value;
-        oco.solicitante = document.getElementById("solicitanteInput").value;
+        oco.solicitante = document.getElementById("solicitanteInput").value; 
+        
         oco.endereco = document.getElementById("enderecoInput").value;
         oco.vitima = document.getElementById("vitimaInput").value;
         oco.descricao = document.getElementById("descricaoInput").value;
@@ -69,19 +70,19 @@ export default function ModalCriarOco(props) {
                                         </tr>
                                         <tr>
                                             <td><label htmlFor="solicitanteInput">Solicitante:</label></td>
-                                            <td><input type="text" name="solicitanteInput" id="solicitanteInput" /></td>
+                                            <td><input required type="text" name="solicitanteInput" id="solicitanteInput" /></td>
                                         </tr>
                                         <tr>
                                             <td><label htmlFor="vitimaInput">Vítima</label></td>
-                                            <td><input type="text" name="vitimaInput" id="vitimaInput" /></td>
+                                            <td><input required type="text" name="vitimaInput" id="vitimaInput" /></td>
                                         </tr>
                                         <tr>
                                             <td><label htmlFor="enderecoInput">Endereço</label></td>
-                                            <td><input type="text" name="enderecoInput" id="enderecoInput" /></td>
+                                            <td><input required type="text" name="enderecoInput" id="enderecoInput" /></td>
                                         </tr>
                                         <tr>
                                             <td><label htmlFor="descricaoInput">Descrição: </label></td>
-                                            <td><textarea name="descricaoInput" id="descricaoInput" cols={30}
+                                            <td><textarea required name="descricaoInput" id="descricaoInput" cols={30}
                                                     rows={4}></textarea></td>
                                         </tr>
                                         <tr>

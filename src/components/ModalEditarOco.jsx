@@ -27,7 +27,8 @@ export default function ModalEditarOco(props) {
         props.setVisibility(false);
     }
 
-    async function salvar() {
+    async function salvar(e) {
+        if(document.getElementById("formEditarOcorrencia").checkValidity()) e.preventDefault(); else return;
         let oc = {};
         oc.despacho = props.oco.despacho;
         oc.fato = props.fato;
@@ -121,7 +122,7 @@ export default function ModalEditarOco(props) {
                                         rows={4}></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><Button onClick={salvar} variant="contained" color="primary">Salvar</Button></td>
+                                    <td><Button type="submit" onClick={salvar} variant="contained" color="primary">Salvar</Button></td>
                                     <td><Button onClick={fecharModalEditarOco} variant="contained" color="secondary">Cancelar</Button></td>
                                 </tr>
                             </tbody>
