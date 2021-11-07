@@ -1,4 +1,4 @@
-# Dispatch Manager of Police Cars (under construction)
+# Dispatch Manager of Police Cars
 ----------
 ![Login screen](./public/Screenshot_1.jpg)
 
